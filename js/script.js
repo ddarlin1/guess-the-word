@@ -1,4 +1,4 @@
-const guessedLettersElement = document.querySelector(".guessed-letters");
+const guessedLettersElement = document.querySelector(".guessed-letters"); // ul
 const guessButton = document.querySelector(".guess");
 // text input where player will guess a letter
 const letterInput = document.querySelector(".letter");
@@ -57,5 +57,41 @@ const makeGuess = function (guess) {
     } else {
         guessedLetters.push(guess);
         console.log(guessedLetters);
+        showGuessedLetters();
+        updateWip(guessedLetters);
+    }
+};
+
+// letters that player guessed function
+const showGuessedLetters = function () {
+    guessedLettersElement.innerHTML = "";
+    for (const letter of guessedLetters) {
+        const li = document.createElement("li");
+        li.innerText = letter;
+        guessedLettersElement.append(li);
+    } // create new list item for each letter inside guessedLetters array and add to ul
+};
+
+// function to update the word in progress (Wip)
+const updateWip = function (guessedLetters) {
+    const wordUpper = word.toUpperCase();
+    const wordArray = wordUpper.split(""); // variable to split the word string into an array so the letters can appear in the gL array
+    const wordReveal = [];
+    for (const letter of wordArray) {
+        if (guessedLetters.includes(letter)) {
+            wordReveal.push(letter.toUpperCase());
+        } else {
+            wordReveal.push("●");
+        }
+    }
+    wordInProgress.innerText = wordReveal.join("");
+    winnerWinner();
+};
+
+// winner function
+const winnerWinner = function () {
+    if (word.toUpperCase() === wordInProgress.innerText) {
+        message.classList.add("win");
+        message.innerHTML = `<p class="hightlight">You correctly guessed the word! Congrats!</p>`;
     }
 };
