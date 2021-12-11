@@ -25,7 +25,7 @@ const getWord = async function () {
     placeholder(word);
 };
 
-getWord();
+getWord(); // starts the game
 
 // function to add placeholders for each letter
 const placeholder = function (word) {
@@ -55,7 +55,7 @@ const validateInput = function (input) {
     if (input.length === 0) {
         message.innerText = "Please enter a letter.";
     } else if (input.length > 1) {
-        message.innerText = "Please enter a single letter.";
+        message.innerText = "Only one letter please!";
     } else if (!input.match(acceptedLetter)) {
         message.innerText = "Please enter a letter from A - Z.";
     } else {
@@ -67,7 +67,7 @@ const validateInput = function (input) {
 const makeGuess = function (guess) {
     guess = guess.toUpperCase();
     if (guessedLetters.includes(guess)) {
-        message.innerText = "You have already guessed that letter. Try again!";
+        message.innerText = "You already guessed that letter, silly. Try again!";
     } else {
         guessedLetters.push(guess);
         console.log(guessedLetters);
@@ -114,7 +114,7 @@ const remainingGuessCount = function (guess) {
     }
     
     if (remainingGuesses === 0) {
-        message.innerHTML = `Game over! The word was <span class="hightlight">${word}</span>.`;
+        message.innerHTML = `GAME OVER! The word was <span class="highlight">${word}</span>. Try again? <span class="emoji"> 🤷🏻‍♀️ </span>`;
         startOver();
     } else if (remainingGuesses === 1) {
         remainingGuessesSpan.innerText = `${remainingGuesses} guess`;
@@ -127,7 +127,7 @@ const remainingGuessCount = function (guess) {
 const winnerWinner = function () {
     if (word.toUpperCase() === wordInProgress.innerText) {
         message.classList.add("win");
-        message.innerHTML = `<p class="hightlight">You got it! Congrats!</p>`;
+        message.innerHTML = `<p class="highlight">Yay, you got it!! Congrats!! <span class="emoji"> 🎉 </span></p>`;
         startOver();
     }
 };

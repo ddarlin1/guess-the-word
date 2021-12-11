@@ -12,7 +12,7 @@ body {
   font-size: 20px;
   line-height: 150%;
   background-color: #dff6f6;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/bg.png"); /* Can customize */
   background-size: 800px;
   background-repeat: repeat;
   color: #305050;
@@ -53,6 +53,11 @@ h1 {
   padding: 0.25em;
   background: #ffe2d6;
   font-size: 1em;
+  text-transform: uppercase;
+}
+
+.emoji {
+  font-size: 1.5em;
 }
 
 .underline {
@@ -134,10 +139,10 @@ input:focus {
   color: white;
 }
 
-/* animatied background */
+/* animated background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, white, #28bdbd, #ffe2d6);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }
