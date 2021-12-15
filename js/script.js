@@ -127,7 +127,8 @@ const remainingGuessCount = function (guess) {
 const winnerWinner = function () {
     if (word.toUpperCase() === wordInProgress.innerText) {
         message.classList.add("win");
-        message.innerHTML = `<p class="highlight">Yay, you got it!! Congrats!! <span class="emoji"> 🎉 </span></p>`;
+        message.innerHTML = `<p class="highlight">Yay, you got it!! Congrats!! <span class="emoji"> 🎉 </span></p>
+        <iframe src="https://giphy.com/embed/YnBntKOgnUSBkV7bQH" width="360" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`;
         startOver();
     }
 };
