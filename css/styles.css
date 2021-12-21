@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  background: url("../img/simple-bg.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Bg photo by Avelino Calvar Martinez */
+
 body {
   display: flex;
   align-items: center;
@@ -11,11 +20,6 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
-  background-color: #dff6f6;
-  background-image: url("../img/bg.png");
-  background-size: 800px;
-  background-repeat: repeat;
-  color: #305050;
 }
 
 .logo {
@@ -35,14 +39,14 @@ h1 {
 }
 
 .container {
-  background: radial-gradient(50% 50% at 50% 50%,
-    rgba(167, 237, 237, 0.3) 0%,
-    rgba(156, 226, 226, 0) 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 90%;
+  background: radial-gradient(50% 50% at 50% 50%,
+    rgba(300, 300, 300, 5) 0%,
+    rgba(236, 236, 230, 0) 100%);
 }
 
 .hide {
@@ -119,7 +123,7 @@ input:focus {
   border-radius: 50px;
   margin-top: 1em;
   color: #fff;
-  background: #ff8d5c;
+  background: #ff9466;
   font-size: 1em;
   align-self: center;
   outline: none;
