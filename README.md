@@ -4,7 +4,9 @@ Players guess the word by entering one letter at a time. If the player guesses a
 #### Skills: Manipulate the DOM, Vanilla JavaScript
 
 ## Screenshot
-![](./screenshot.png)
+<img alt="screenshot" src="https://user-images.githubusercontent.com/87884573/149267599-9afa07da-a197-456d-8a40-28c164bd92fb.png">
+
+
 
 ### Links
 Live Site URL: [https://ddarlin1.github.io/guess-the-word/](https://ddarlin1.github.io/guess-the-word/)
